@@ -49,6 +49,7 @@ decrypted_message = pwn.xor(ciphertext_1, ciphertext_2, known_message)
 
 # Print the resulting flag (decrypted message)
 print("FLAG: ", decrypted_message)
+```
 # Cryptography Challenge - Decrypting XOR Encrypted Messages
 
 This project solves a cryptography challenge where we need to decrypt a hidden flag using XOR encryption. The goal of this challenge is to recover the flag by XORing multiple ciphertexts with a known message.
