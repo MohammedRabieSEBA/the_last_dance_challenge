@@ -50,42 +50,21 @@ decrypted_message = pwn.xor(ciphertext_1, ciphertext_2, known_message)
 # Print the resulting flag (decrypted message)
 print("FLAG: ", decrypted_message)
 ```
-# Cryptography Challenge - Decrypting XOR Encrypted Messages
+## How the Code Works:
 
-This project solves a cryptography challenge where we need to decrypt a hidden flag using XOR encryption. The goal of this challenge is to recover the flag by XORing multiple ciphertexts with a known message.
-
-## Challenge Overview
-
-The challenge provides us with two ciphertexts that were encrypted using the same key and a known plaintext message. We are tasked with using the XOR operation to reveal the hidden flag. XOR encryption is commonly used in cryptography, especially in Capture the Flag (CTF) competitions, because of its reversible nature.
-
-The provided ciphertexts were encrypted using the **ChaCha20 cipher** and the same nonce and key. Our goal is to decrypt these ciphertexts and extract the flag.
-
-## Solution
-
-### Steps
-
-1. **Understanding the Encryption**:
-   - The ciphertexts were generated using the **ChaCha20** stream cipher. However, instead of decrypting the ciphertexts directly with ChaCha20, we use XOR between two ciphertexts and a known plaintext message.
-   
-2. **Using XOR Decryption**:
-   - XOR is a simple reversible encryption technique. If we XOR the ciphertext with the key or the plaintext message, we can retrieve the original message.
-   - In this case, by XORing the two given ciphertexts with the known message, we can reveal the hidden flag.
-
-### How the Code Works:
-
-#### Hexadecimal Conversion:
+### Hexadecimal Conversion:
 
 The ciphertexts (`hex_ciphertext_1` and `hex_ciphertext_2`) are provided as hexadecimal strings. We convert them to bytes using `bytes.fromhex()` so that we can process them.
 
-#### XOR Operation:
+### XOR Operation:
 
 We use the `pwn.xor()` function to XOR the two ciphertexts along with the known plaintext (`known_message`). This operation reveals the hidden message (the flag) after performing the XOR on the provided data.
 
-#### Output:
+### Output:
 
 The output is printed using `print()`, and it will display the flag in the form of a decrypted message.
 
-### Expected Output:
+## Expected Output:
 
 When you run the code, you should see the following output (depending on the challenge's flag):
 
