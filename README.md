@@ -66,5 +66,27 @@ The output is printed using `print()`, and it will display the flag in the form 
 
 ## Expected Output:
 
-When you run the code, you should see the following output (depending on the challenge's flag):
+When you run the code, you should see the following output:
+
+```python
+
+FLAG: b'HTB{und3r57AnD1n9_57R3aM_C1PH3R5_15_51mPl3_a5_7Ha7}'
+
+```
+
+## Requirements:
+
+To run this solution, you need the `pwn` Python library. If you don't have it installed, you can install it using:
+
+```python
+
+pip install pwntools
+
+```
+
+## Conclusion
+
+This challenge demonstrates how XOR encryption and decryption can be used to retrieve a hidden message when the same key is applied to multiple ciphertexts and a known plaintext is available. By using the pwn library, we were able to easily perform the XOR operation and reveal the flag.
+
+
 
